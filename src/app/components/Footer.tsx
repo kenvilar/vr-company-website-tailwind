@@ -14,7 +14,7 @@ const Footer = () => {
       <footer className="bg-black">
         <div className="container max-w-6xl py-10 mx-auto">
           <div className="flex flex-col items-center mb-8 space-y-6 md:flex-row md:space-y-0 md:justify-between md:items-start">
-            <div className="flex flex-col items-center space-y-8 md:items-center md:space-y-4">
+            <div className="flex flex-col items-center space-y-8 md:items-start md:space-y-4">
               <div className="h-8">
                 <Image src={Logo} alt="logo" className="w-44 md:ml-3" />
               </div>
@@ -29,25 +29,25 @@ const Footer = () => {
                   );
                 })}
               </div>
+            </div>
 
-              {/*social icons*/}
-              <div className="flex flex-col items-start justify-between space-y-4 text-gray-500">
-                <div className="flex items-center justify-center mx-auto space-x-4 md:justify-end md:mx-0">
-                  {/*item*/}
-                  {socialItems.map((item, idx) => {
-                    return (
-                      <div key={idx} className="h-8 group">
-                        <a href="#">
-                          <Image src={item} alt="social" className="h-6" />
-                        </a>
-                      </div>
-                    );
-                  })}
-                </div>
+            {/*social icons*/}
+            <div className="flex flex-col items-start justify-between space-y-4 text-gray-500">
+              <div className="flex items-center justify-center mx-auto space-x-4 md:justify-end md:mx-0">
+                {/*item*/}
+                {socialItems.map((item, idx) => {
+                  return (
+                    <div key={idx} className="h-8 group">
+                      <a href="#">
+                        <Image src={item} alt="social" className="h-6" />
+                      </a>
+                    </div>
+                  );
+                })}
+              </div>
 
-                <div className="font-bold">
-                  &copy; 2022 Loopstudios. All Rights Reserved
-                </div>
+              <div className="font-bold">
+                &copy; 2022 Loopstudios. All Rights Reserved
               </div>
             </div>
           </div>
