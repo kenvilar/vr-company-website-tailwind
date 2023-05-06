@@ -7,6 +7,14 @@ import SoccerDesktop from "@/app/assets/images/desktop/image-soccer-team.jpg";
 import SoccerMobile from "@/app/assets/images/mobile/image-soccer-team.jpg";
 import GridDesktop from "@/app/assets/images/desktop/image-grid.jpg";
 import GridMobile from "@/app/assets/images/mobile/image-grid.jpg";
+import AboveDesktop from "@/app/assets/images/desktop/image-from-above.jpg";
+import AboveMobile from "@/app/assets/images/mobile/image-from-above.jpg";
+import BorealisDesktop from "@/app/assets/images/desktop/image-pocket-borealis.jpg";
+import BorealisMobile from "@/app/assets/images/mobile/image-pocket-borealis.jpg";
+import CuriosityDesktop from "@/app/assets/images/desktop/image-curiosity.jpg";
+import CuriosityMobile from "@/app/assets/images/mobile/image-curiosity.jpg";
+import FishEyeDesktop from "@/app/assets/images/desktop/image-fisheye.jpg";
+import FishEyeMobile from "@/app/assets/images/mobile/image-fisheye.jpg";
 
 const Creations = () => {
   const items = [
@@ -32,6 +40,29 @@ const Creations = () => {
     },
   ];
 
+  const items2 = [
+    {
+      desktop: AboveDesktop.src,
+      mobile: AboveMobile.src,
+      title: "From Up Above VR",
+    },
+    {
+      desktop: BorealisDesktop.src,
+      mobile: BorealisMobile.src,
+      title: "Pocket Borealis",
+    },
+    {
+      desktop: CuriosityDesktop.src,
+      mobile: CuriosityMobile.src,
+      title: "The Curiosity",
+    },
+    {
+      desktop: FishEyeDesktop.src,
+      mobile: FishEyeMobile.src,
+      title: "Make It Fisheye",
+    },
+  ];
+
   return (
     <>
       <section id="creations">
@@ -44,10 +75,36 @@ const Creations = () => {
             <Button class_name="hidden md:block">See All</Button>
           </div>
 
-          {/*Items Container*/}
+          {/*Items1 Container*/}
           <div className="item-container">
             {/*item*/}
             {items.map((item, idx) => {
+              return (
+                <div key={idx} className="group item">
+                  {/*desktop*/}
+                  <img
+                    src={item.desktop}
+                    alt="desktop"
+                    className="hidden w-full duration-200 md:block group-hover:scale-110"
+                  />
+                  {/*mobile*/}
+                  <img
+                    src={item.mobile}
+                    alt="mobile"
+                    className="w-full md:hidden"
+                  />
+                  {/*gradient*/}
+                  <div className="item-gradient" />
+                  <h5>{item.title}</h5>
+                </div>
+              );
+            })}
+          </div>
+
+          {/*Items2 Container*/}
+          <div className="item-container mt-10">
+            {/*item*/}
+            {items2.map((item, idx) => {
               return (
                 <div key={idx} className="group item">
                   {/*desktop*/}
