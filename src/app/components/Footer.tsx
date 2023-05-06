@@ -1,8 +1,13 @@
 import Image from "next/image";
 import Logo from "@/app/assets/images/logo.svg";
+import Facebook from "@/app/assets/images/icon-facebook.svg";
+import Twitter from "@/app/assets/images/icon-twitter.svg";
+import Pinterest from "@/app/assets/images/icon-pinterest.svg";
+import Instagram from "@/app/assets/images/icon-instagram.svg";
 
 const Footer = () => {
   const menuItems = ["About", "Careers", "Events", "Products", "Support"];
+  const socialItems = [Facebook, Twitter, Pinterest, Instagram];
 
   return (
     <>
@@ -23,6 +28,26 @@ const Footer = () => {
                     </div>
                   );
                 })}
+              </div>
+
+              {/*social icons*/}
+              <div className="flex flex-col items-start justify-between space-y-4 text-gray-500">
+                <div className="flex items-center justify-center mx-auto space-x-4 md:justify-end md:mx-0">
+                  {/*item*/}
+                  {socialItems.map((item, idx) => {
+                    return (
+                      <div key={idx} className="h-8 group">
+                        <a href="#">
+                          <Image src={item} alt="social" className="h-6" />
+                        </a>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                <div className="font-bold">
+                  &copy; 2022 Loopstudios. All Rights Reserved
+                </div>
               </div>
             </div>
           </div>
