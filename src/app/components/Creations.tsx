@@ -126,6 +126,10 @@ const Creations = () => {
               );
             })}
           </div>
+
+          <div className="flex justify-center mt-10 md:hidden">
+            <Button className="w-full md:hidden">See All</Button>
+          </div>
         </div>
       </section>
     </>
