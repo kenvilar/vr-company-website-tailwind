@@ -43,6 +43,18 @@ const Hero = () => {
           </nav>
 
           {/*todo mobile menu*/}
+          <div
+            id="menu"
+            className="absolute top-0 bottom-0 left-0 flex-col self-end  w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercase bg-black"
+          >
+            {menus.map((item, idx) => {
+              return (
+                <a key={idx} href="#" className="hover:text-pink-500">
+                  {item}
+                </a>
+              );
+            })}
+          </div>
 
           <div
             className={`max-w-lg mt-32 mb-32 p-4 ${josefin_sans.className} text-4xl text-white uppercase border-2 md:p-10 md:m-32 md:mx-0 md:text-6xl`}
