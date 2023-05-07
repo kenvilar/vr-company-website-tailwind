@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Logo from "@/app/assets/images/logo.svg";
 import { Alata, Josefin_Sans } from "next/font/google";
@@ -7,6 +8,18 @@ const josefin_sans = Josefin_Sans({ weight: ["300"], subsets: ["latin"] });
 
 const Hero = () => {
   const menus = ["About", "Careers", "Events", "Products", "Support"];
+
+  const menuMobileToggle = () => {
+    let btn = document.getElementById("menu-btn");
+    let menu = document.getElementById("menu");
+    if (btn) {
+      btn.classList.toggle("open");
+    }
+    if (menu) {
+      menu.classList.toggle("hidden");
+      menu.classList.toggle("flex");
+    }
+  };
 
   return (
     <>
@@ -31,9 +44,10 @@ const Hero = () => {
             {/*hamburger button*/}
             <div className="md:hidden">
               <button
-                id="menu-button"
+                id="menu-btn"
                 type="button"
                 className="z-40 block hamburger md:hidden focus:outline-none"
+                onClick={menuMobileToggle}
               >
                 <span className="hamburger-top" />
                 <span className="hamburger-middle" />
