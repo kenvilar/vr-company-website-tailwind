@@ -5,7 +5,7 @@ const alata = Alata({ weight: ["400"], subsets: ["latin"] });
 const josefin_sans = Josefin_Sans({ weight: ["300"], subsets: ["latin"] });
 
 export const metadata = {
-  title: "Loopstudios",
+  title: "Loopstudios - Ken Vilar",
   description: "",
 };
 
